@@ -208,12 +208,24 @@ rules:
   - MATCH,🚀 节点选择
 
 rule-providers:
+  geosite-category-ads-all:
+    type: http
+    behavior: domain
+    interval: 86400
+    url: "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
+    format: mrs
   geosite-cn:
     type: http
     behavior: domain
     interval: 86400
     url: "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"
     format: mrs
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
   geoip-cn:
     type: http
     behavior: ipcidr
@@ -226,9 +238,9 @@ rule-providers:
     interval: 86400
     url: "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"
     format: mrs
-  geosite-category-ads-all:
+  proxy:
     type: http
     behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
     interval: 86400
-    url: "https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.mrs"
-    format: mrs
