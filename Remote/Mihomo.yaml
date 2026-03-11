@@ -234,7 +234,7 @@ rules:
   - RULE-SET,geoip-cn,DIRECT
   - RULE-SET,geosite-geolocation-!cn,🚀 节点选择
   - RULE-SET,proxy,🚀 节点选择
-  - MATCH,🚀 节点选择
+  - MATCH,DIRECT
 
 rule-providers:
   geosite-category-ads-all:
